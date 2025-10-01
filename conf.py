@@ -26,6 +26,7 @@ def obtener_modelo_serie(ser):
 def configurar_dispositivo(ser, nombre, usuario, contrasena, dominio):
     """Envía comandos de configuración al dispositivo."""
     comandos = [
+        "enable",
         "configure terminal",
         f"hostname {nombre}",
         f"username {usuario} password {contrasena}",
@@ -62,8 +63,7 @@ def configurar_dispositivo(ser, nombre, usuario, contrasena, dominio):
 
 
 def cargar_y_configurar():
-    """Lee el Excel y configura el dispositivo si hay coincidencia."""
-    df = pd.read_excel(r"C:\Users\Xg\Documents\2 uni lap\VIS\4TO\Programacion en redes\practica 1\dispositivosos.xlsx")
+    df = pd.read_excel(r"C:\Users\Xg\Documents\2 uni lap\VIS\4TO\Programacion en redes\practica 1\venv shit\dispositivosos.xlsx")
     
 
     # Validar columnas
@@ -108,7 +108,5 @@ def cargar_y_configurar():
 # ========= MAIN =========
 if __name__ == "__main__":
     cargar_y_configurar()
-
-
 
     #YA ESTA COCINADO JEJE
