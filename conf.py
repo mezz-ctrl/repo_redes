@@ -107,7 +107,6 @@ def cargar_y_configurar():
 
 # ========= MAIN =========
 if __name__ == "__main__":
-    cargar_y_configurar()
-
+    cargar_y_configurar()    
     
     #YA ESTA COCINADO JEFE
